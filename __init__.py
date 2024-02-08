@@ -6,11 +6,11 @@ app = Flask(__name__) #creating flask app name
 def home():
     return render_template("resume_2.html")
 
-@app.route('/consultation')
-def ReadBDD():
+@app.route('/consultation/<int:post_id>')
+def Readfiche(post_id):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM clients;')
+    cursor.execute('SELECT * FROM clients WHERE id = ?', (post_id,))
     data = cursor.fetchall()
     conn.close()
     
