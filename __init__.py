@@ -6,7 +6,7 @@ app = Flask(__name__) #creating flask app name
 def home():
     return render_template("resume_2.html")
 
-@app.route('/consultation/')
+@app.route('/consultation/5625719273')
 def ReadBDD():
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
