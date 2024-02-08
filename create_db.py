@@ -7,14 +7,14 @@ with open('schema.sql') as f:
 
 cur = connection.cursor()
 
-cur.execute("INSERT INTO clients (nom, prenom, adresse) VALUES (?, ?, ?)",('DUPONT', 'Emilie', '123, bonjour'))
-cur.execute("INSERT INTO clients (nom, prenom, adresse) VALUES (?, ?, ?)",('LEROUX', 'Lucas', 'salut'))
-cur.execute("INSERT INTO clients (nom, prenom, adresse) VALUES (?, ?, ?)",('MARTIN', 'Amandine', 'oui'))
-cur.execute("INSERT INTO clients (nom, prenom, adresse) VALUES (?, ?, ?)",('TRAMBLEY', 'Antoine', 'non'))
-cur.execute("INSERT INTO clients (nom, prenom, adresse) VALUES (?, ?, ?)",('LAMBERT', 'Sarah', 'ca va'))
-cur.execute("INSERT INTO clients (nom, prenom, adresse) VALUES (?, ?, ?)",('GAGON', 'Nicolas', 'bonsoir'))
-cur.execute("INSERT INTO clients (nom, prenom, adresse) VALUES (?, ?, ?)",('DUBOIS', 'Charlotte', 'salut'))
-cur.execute("INSERT INTO clients (nom, prenom, adresse) VALUES (?, ?, ?)",('LEFEVRE', 'Thomas', 'oui'))
+cur.execute("INSERT INTO clients (nom, prenom, message) VALUES (?, ?, ?)",('DUPONT', 'Emilie', '123, bonjour'))
+cur.execute("INSERT INTO clients (nom, prenom, message) VALUES (?, ?, ?)",('LEROUX', 'Lucas', 'salut'))
+cur.execute("INSERT INTO clients (nom, prenom, message) VALUES (?, ?, ?)",('MARTIN', 'Amandine', 'oui'))
+cur.execute("INSERT INTO clients (nom, prenom, message) VALUES (?, ?, ?)",('TRAMBLEY', 'Antoine', 'non'))
+cur.execute("INSERT INTO clients (nom, prenom, message) VALUES (?, ?, ?)",('LAMBERT', 'Sarah', 'ca va'))
+cur.execute("INSERT INTO clients (nom, prenom, message) VALUES (?, ?, ?)",('GAGON', 'Nicolas', 'bonsoir'))
+cur.execute("INSERT INTO clients (nom, prenom, message) VALUES (?, ?, ?)",('DUBOIS', 'Charlotte', 'salut'))
+cur.execute("INSERT INTO clients (nom, prenom, message) VALUES (?, ?, ?)",('LEFEVRE', 'Thomas', 'oui'))
 
 
 connection.commit()
